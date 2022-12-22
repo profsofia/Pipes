@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SharedModule } from '../app/shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 import { AppComponent } from './app.component';
+import { VentasModule } from './ventas/ventas.module';
 
-//prime ng
-import {ButtonModule} from 'primeng/button';
+//cambiar el local de la app
+import localEsAr from '@angular/common/locales/es-AR';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localEsAr);
 
 
 @NgModule({
@@ -12,7 +17,9 @@ import {ButtonModule} from 'primeng/button';
   ],
   imports: [
     BrowserModule,
-    ButtonModule
+    SharedModule,
+    VentasModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,86 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p>
+        Pipes incluídos en Angular ((@angular/common))
+    </p>
+</div>
+<div class="grid">
+    <div class="col-4">
+        <p-card header="UPPERCASE" [subheader]="nombre | uppercase">
+            <p-footer>{{nombre | json}}</p-footer>
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="lowecase" [subheader]="nombre | lowercase">
+            <p-footer>{{nombre | json}}</p-footer>
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Title Case" [subheader]="nombre | titlecase">
+            <p-footer>{{nombre | json}}</p-footer>
+        </p-card>
+    </div>
+
+</div>
+<div class="text-layout">
+    <h1>Date Pipe</h1>
+    <p>
+        Manejo de fechas.
+    </p>
+</div>
+<div class="text-layout">
+    <div class="grid">
+        <div class="col-6">
+            Definición del pipe
+        </div>
+        <div class="col-6">
+            Resultado
+        </div>
+    </div>
+</div>
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+           <ul>
+            <li>
+                1. Fecha -->
+            </li>
+            <li>
+                2. Fecha con el pipe por defecto-->
+            </li>
+            <li>
+                2. Fecha con el pipe date y el atributo short->
+            </li>
+            <li>
+                3. Custom Date -->
+            </li>
+            <hr>
+            <li>
+                4. Cambio de idioma a Español Argentina -->
+            </li>
+           </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card>
+           <ul>
+            <li>
+                1. {{fechaHoy}}
+            </li>
+            <li>
+                2. {{fechaHoy | date}}
+            </li>
+            <li>
+                3. {{fechaHoy | date: 'short'}}
+            </li>
+            <li>
+                3. {{fechaHoy | date: 'EEEE, dd/MM/YYYY'}}
+            </li>
+            <hr>
+            <li>
+                4. {{fechaHoy | date}}
+            </li>
+           </ul>
+        </p-card>
+    </div>
+</div>
