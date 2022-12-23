@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval, take } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -35,4 +36,36 @@ export class NoComunesComponent {
   eliminarCliente(){
     this.clientes.pop();
   }
+  //keyValue Pipe
+  persona={
+    nombre:'Sofia',
+    direccion:'Argentina, Buenos Aires',
+    edad:29
+  }
+  //Json Pipe
+  heroes =[
+    {
+      nombre:'Superman',
+      vuela: true
+    },
+    {
+      nombre:'Iroman',
+      vuela: true
+    },
+    {
+      nombre:'Linterna Verde',
+      vuela: false
+    }
+  ]
+  //Async Pipe
+  //Esto es un observable que está emitiendo numeros, desde el cero... cada 3 segundos
+  miObservable = interval(1000);
+  losdiezprimeros = this.miObservable.pipe(take(11));
+
+  //promesa
+  miPromesa = new Promise((resolve, rejet)=>{
+    setTimeout(() => {
+      resolve('Tenemos los datos de la promesa...')
+    }, 3500);
+  })
 }
