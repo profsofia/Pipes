@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SharedModule } from '../app/shared/shared.module';
 import { AppRouterModule } from './app-router.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ registerLocaleData(localEsAr);
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     SharedModule,
     VentasModule,
     AppRouterModule

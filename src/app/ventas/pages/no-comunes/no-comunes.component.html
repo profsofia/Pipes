@@ -1,1 +1,35 @@
-<p>no-comunes works!</p>
+<div class="text-layout">
+  <h1>Pipes poco comunes</h1>
+  <p>Pipes incluídos en Angular ((@angular/common))</p>
+</div>
+<div class="grid">
+  <div class="col col-md-12">
+    <p-fieldset legend="I18nSelectPipe" [toggleable]="true">
+      <p>
+        Hola {{ nombre }}, es un placer {{ genero | i18nSelect : pipeMap }} a
+        nuestro evento!.
+      </p>
+      <button
+        (click)="cambiarPersona()"
+        pButton
+        pRipple
+        type="button"
+        label="Cambiar persona"
+        class="p-button-outlined"
+      ></button>
+    </p-fieldset>
+  </div>
+  <div class="col col-md-12">
+    <p-fieldset legend="I18nPluralPipe" [toggleable]="true">
+      <p>Actualmente {{ clientes.length | i18nPlural : pluralMap }}</p>
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Eliminar cliente"
+        class="p-button-outlined p-button-secondary"
+        (click)="eliminarCliente()"
+      ></button>
+    </p-fieldset>
+  </div>
+</div>
