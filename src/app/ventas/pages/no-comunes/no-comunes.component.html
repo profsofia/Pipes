@@ -9,27 +9,15 @@
         Hola {{ nombre }}, es un placer {{ genero | i18nSelect : pipeMap }} a
         nuestro evento!.
       </p>
-      <button
-        (click)="cambiarPersona()"
-        pButton
-        pRipple
-        type="button"
-        label="Cambiar persona"
-        class="p-button-outlined"
-      ></button>
+      <button (click)="cambiarPersona()" pButton pRipple type="button" label="Cambiar persona"
+        class="p-button-outlined"></button>
     </p-fieldset>
   </div>
   <div class="col-12 md:col-12 lg:col-6">
     <p-fieldset legend="I18nPluralPipe" [toggleable]="true">
       <p>Actualmente {{ clientes.length | i18nPlural : pluralMap }}</p>
-      <button
-        pButton
-        pRipple
-        type="button"
-        label="Eliminar cliente"
-        class="p-button-outlined p-button-secondary"
-        (click)="eliminarCliente()"
-      ></button>
+      <button pButton pRipple type="button" label="Eliminar cliente" class="p-button-outlined p-button-secondary"
+        (click)="eliminarCliente()"></button>
     </p-fieldset>
   </div>
   <div class="col-12 md:col-6 lg:col-12">
@@ -69,9 +57,7 @@
       <h3>Observable..</h3>
       <pre>{{losdiezprimeros | async}}</pre>
       <!--miPromesa | async = al valor de la promesa-->
-      <h3
-      *ngIf="!(miPromesa | async)"
-      >Resolviendo promesa..</h3>
+      <h3 *ngIf="!(miPromesa | async)">Resolviendo promesa..</h3>
       <pre>{{miPromesa | async}}</pre>
     </p-fieldset>
   </div>

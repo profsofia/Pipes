@@ -5,6 +5,9 @@ import { NoComunesComponent } from './pages/no-comunes/no-comunes.component';
 import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { PrimengModule } from '../primeng/primeng.module';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { Vuela } from './pipes/vuela.pipe';
+import { Color } from './pipes/color.pipe';
 
 
 
@@ -13,7 +16,10 @@ import { PrimengModule } from '../primeng/primeng.module';
     NumerosComponent,
     NoComunesComponent,
     BasicosComponent,
-    OrdenarComponent
+    OrdenarComponent,
+    MayusculasPipe,
+    Vuela,
+    Color
   ],
   exports:[
     NumerosComponent,
