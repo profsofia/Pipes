@@ -8,6 +8,7 @@ import { PrimengModule } from '../primeng/primeng.module';
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { Vuela } from './pipes/vuela.pipe';
 import { Color } from './pipes/color.pipe';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
 
 
 
@@ -19,7 +20,8 @@ import { Color } from './pipes/color.pipe';
     OrdenarComponent,
     MayusculasPipe,
     Vuela,
-    Color
+    Color,
+    OrdenarPipe
   ],
   exports:[
     NumerosComponent,

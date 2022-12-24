@@ -6,6 +6,7 @@ import { Color, Heroes } from '../../interfaces/heroes.interface';
   templateUrl: './ordenar.component.html'
 })
 export class OrdenarComponent {
+  ordenarPor : string = '';
  heroes : Heroes[] =[
   {
     nombre: 'Superman',
@@ -39,4 +40,7 @@ export class OrdenarComponent {
 
 
  // arreglo de heroes!
+ ordenar(valor: string){
+  this.ordenarPor= valor;
+ }
 }
